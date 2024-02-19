@@ -7,8 +7,9 @@
 
 运行interface.py
 
-#### 开箱即用
+#### 开箱即用 [下载地址](https://pan.baidu.com/s/1okhoq9pAhQABGZnWFToLGA?pwd=1234)
 文件解压缩后进入：数据工程工具集 —> dist —> interface 文件夹，双击interface.exe文件，即可进入工具主界面（图1）：
+
 ![image](https://github.com/xf-huang/batch_data_processing_kits/assets/54733565/ebb453dc-699f-4ee7-9b24-78bc3bffff46)
 
 图1
@@ -22,7 +23,7 @@
 
 2.原理
 
-高德地图提供了地理/逆地理编码的应用程序接口（API）服务，开发者可以通过调用该API，由单位的地址获取其经纬度坐标。在高德开放平台（https://lbs.amap.com/）注册账号并申请key后即可调用该服务。
+高德地图提供了地理/逆地理编码的应用程序接口（API）服务，开发者可以通过调用该API，由单位的地址获取其经纬度坐标。在[高德开放平台](https://lbs.amap.com/)注册账号并申请key后即可调用该服务。
 
 本工具采用python代码编写，利用pandas库读取表格中的地址数据，利用requests库调用高德API获取POI数据，json库解析POI数据获取经纬度数据，for循环批量获取，获取到的数据用pandas库写入表格。
 
@@ -62,7 +63,7 @@
 
 2.原理
 
-不同坐标系之间相互转换的算法代码来自CSDN博客（https://blog.csdn.net/chenxu0136/article/details/119361975?spm=1001.2014.3001.5502），经过与GeoSharp工具的转换结果对比，代码转换结果与GeoSharp转换结果一致。
+不同坐标系之间相互转换的算法代码来自[CSDN博客](https://blog.csdn.net/chenxu0136/article/details/119361975?spm=1001.2014.3001.5502)，经过与GeoSharp工具的转换结果对比，代码转换结果与GeoSharp转换结果一致。
 
 3.使用方法
 
@@ -165,7 +166,7 @@ pdfplumber是一个功能强大、灵活的Python第三方库，可以识别和�
 
 3.1.4自定义
 
-该方法是为了提取不规则的表格，如三线表，通过输入页码，指定想要提取的表格所在的PDF页面，通过输入“表格所在页面高度1”和“表格所在页面高度2”，指定表格所在的页面位置，如表格位于页面的1/4到3/4高度范围内，可设置“表格所在页面高度1”为0.25，设置“表格所在页面高度2”为0.75，通过输入自定义参数，指定具体的表格识别和提取方式，具体参数含义和参数值见pdfplumber文档（https://github.com/hbh112233abc/pdfplumber/blob/stable/README-CN.md），自定义参数输入完成后将光标放到文本的开头位置，再点击“开始提取”按钮。提取后的表格会以xlsx格式保存在②选择的文件夹路径下，以“输出表格”作为文件名。
+该方法是为了提取不规则的表格，如三线表，通过输入页码，指定想要提取的表格所在的PDF页面，通过输入“表格所在页面高度1”和“表格所在页面高度2”，指定表格所在的页面位置，如表格位于页面的1/4到3/4高度范围内，可设置“表格所在页面高度1”为0.25，设置“表格所在页面高度2”为0.75，通过输入自定义参数，指定具体的表格识别和提取方式，具体参数含义和参数值见[pdfplumber文档](https://github.com/hbh112233abc/pdfplumber/blob/stable/README-CN.md)，自定义参数输入完成后将光标放到文本的开头位置，再点击“开始提取”按钮。提取后的表格会以xlsx格式保存在②选择的文件夹路径下，以“输出表格”作为文件名。
 
 ![image](https://github.com/xf-huang/batch_data_processing_kits/assets/54733565/38cd4c8c-fb99-4336-8177-565b20c44c95)
 
@@ -192,7 +193,7 @@ pdfplumber是一个功能强大、灵活的Python第三方库，可以识别和�
 
 2.原理
 
-通过百度翻译开放平台（https://api.fanyi.baidu.com/api/trans/product/apidoc）提供的API接口，利用python的pandas库实现字段名的读取和写入，requests库发送请求和接收返回数据，可实现字段名的批量翻译，翻译结果通过字符串处理转为规范格式，并计算字符串长度，按照字符串长度排序输出翻译结果到Excel表格中。
+通过[百度翻译开放平台](https://api.fanyi.baidu.com/api/trans/product/apidoc)提供的API接口，利用python的pandas库实现字段名的读取和写入，requests库发送请求和接收返回数据，可实现字段名的批量翻译，翻译结果通过字符串处理转为规范格式，并计算字符串长度，按照字符串长度排序输出翻译结果到Excel表格中。
 
 3.使用方法
 
